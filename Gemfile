@@ -30,6 +30,12 @@ gem "jbuilder"
 # Add 'rubocop' to search for errors
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# Use the devise gem as the session and account manager for the application
+gem 'devise'
+
+# Authorization library for Ruby and Ruby on Rails which restricts what resources a given user is allowed to access.
+gem 'cancancan'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -53,7 +59,20 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  # Checks for N+1 queries
+  gem 'bullet'
+
+  # Added for integrations tests
+  gem 'database_cleaner'
+
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+
+  # Preview email in the default browser instead of sending it
+  gem 'letter_opener'
+
+  # For rspec tests
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
 end
 
 group :development do
