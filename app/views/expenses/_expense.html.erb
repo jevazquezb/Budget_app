@@ -1,0 +1,5 @@
+<div class="single-trans">
+  <p class="cat-name"><%= expense.name %></p>
+  <p class="amount">$ <%= expense.amount %></p>
+</div>
+<p class="cat-name date"><%= expense.created_at.strftime("%b-%d-%Y, %I:%M%p")%></p>

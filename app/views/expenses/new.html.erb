@@ -1,0 +1,13 @@
+<%= form_with model: [@group, @expense], url: group_expenses_path(@group.id) do |form| %>
+  <div class="cat-field-cont">
+    <%= form.text_field :name, value: @expense.name, placeholder: "Expense", required: true, class: "cat-field" %>
+  </div>
+
+  <div class="cat-field-cont">
+    <%= form.number_field :amount, value: @expense.amount, placeholder: "Amount", required: true, step: :any, class: "cat-field" %>
+  </div>
+
+  <div class="actions-cat">
+    <%= form.submit "Save", class: "save-btn" %>
+  </div>
+<% end %>
