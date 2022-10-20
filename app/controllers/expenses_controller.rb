@@ -1,16 +1,16 @@
 class ExpensesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :set_group
+
   def index
-    @group = Group.find(params[:group_id])
     @expenses = @group.expenses.order(created_at: :desc)
   end
 
   def new
-    @group = Group.find(params[:group_id])
     @expense = Expense.new
   end
 
   def create
-    @group = Group.find(params[:group_id])
     @expense = Expense.new(expense_params)
     @expense.user_id = current_user.id
     @group.expenses << @expense
@@ -25,12 +25,10 @@ class ExpensesController < ApplicationController
   end
 
   def show
-    @group = Group.find(params[:group_id])
     @expense = Expense.find(params[:id])
   end
 
   def destroy
-    @group = Group.find(params[:group_id])
     @expense = Expense.find(params[:id])
     @expense.destroy
 
@@ -39,9 +37,13 @@ class ExpensesController < ApplicationController
     end
   end
 
+  def set_group
+    @group = Group.find(params[:group_id])
+  end
+
   def expense_params
     params.require(:expense).permit(:name, :amount).merge(user_id: current_user.id)
   end
 
-  private :expense_params
+  private :expense_params, :set_group
 end
