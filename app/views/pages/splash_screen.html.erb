@@ -1,0 +1,14 @@
+<section class="main">
+  <div class="main-title-cont">
+    <h1 class="app-title">Finapp</h1>
+  </div>
+  <div class="registration">
+    <p class="owner">By Jesús Vázquez</p>
+    <div class="reg-btn-cont">
+      <%= link_to new_user_session_path, class: "login" do%>
+        <p>LOG IN</p>
+      <% end %>
+      <%= link_to "SIGN UP", new_user_registration_path, class: "signup" %>
+    </div>
+  </div>
+</section>
