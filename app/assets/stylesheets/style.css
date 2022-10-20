@@ -68,7 +68,6 @@ body {
 
 .navbar {
   padding: 10px;
-  /*margin-bottom: 5%;*/
   background-color: #3778c2;
   color: #fff;
 }
@@ -230,7 +229,7 @@ body {
 
 /* Transactions index */
 .rem-btn {
-  background-color: #ff0000;
+  background-color: #f00;
   color: #fff;
   font-size: 0.9rem;
   padding: 7px;
@@ -308,7 +307,7 @@ body {
   align-items: center;
   margin-left: 3%;
   margin-top: 2vh;
-  color: #434b54;;
+  color: #434b54;
 }
 
 .box-size {

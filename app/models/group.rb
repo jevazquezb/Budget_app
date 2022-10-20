@@ -8,7 +8,7 @@ class Group < ApplicationRecord
   validates :icon, presence: true
 
   def total
-    expenses.sum { |expense| expense.amount }
+    expenses.sum(&:amount)
   end
 
   def self.icon_list

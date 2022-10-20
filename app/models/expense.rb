@@ -5,5 +5,5 @@ class Expense < ApplicationRecord
 
   validates :name, presence: true,
                    length: { minimum: 2, too_short: '%<count> characters is the minimum allowed' }
-  validates :amount, presence: true, numericality: { greater_than: 0 }              
+  validates :amount, presence: true, numericality: { greater_than: 0 }
 end
