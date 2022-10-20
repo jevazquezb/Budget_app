@@ -1,6 +1,7 @@
 class ExpensesController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_group
+  before_action :authenticate_user!
+  load_and_authorize_resource
 
   def index
     @expenses = @group.expenses.order(created_at: :desc)
