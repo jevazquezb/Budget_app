@@ -1,0 +1,20 @@
+  <section class="not-cont">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </section>
+  <section class="cat-cont">
+    <% if @groups.any? %>
+      <% @groups.each do |group| %>
+        <%= link_to group_expenses_path(group.id), class:"cat-link" do %>
+          <%= render group %>
+        <% end %>
+      <% end %>
+    <% else %>
+      <h2 class="non-items-msg">You have not added any category</h2>
+    <% end %>
+  </section>
+  <div class="add-cat-box">
+    <%= link_to new_group_path, class: "new-cat-link" do %>
+      <p>Add new category</p>
+    <% end %>
+  </div>

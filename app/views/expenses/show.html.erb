@@ -1,0 +1,10 @@
+<section class="not-cont">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</section>
+<section class="cat-cont">
+  <div class="cat-link trans-box">
+    <%= render @expense %>
+  </div>
+  <%= button_to "Delete transaction", group_expense_path(@group.id, @expense.id), method: :delete, class: "rem-btn" %>
+</section>

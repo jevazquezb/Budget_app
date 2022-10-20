@@ -1,0 +1,80 @@
+<header>
+  <nav class="navbar">
+    <ul class="navlist">
+      <% if current_page?(new_user_session_path) %>
+        <li class="center">
+          <%= link_to root_path, class: "center link" do %>
+            <span class="iconify icon-size" data-icon="akar-icons:arrow-left"></span>
+          <% end %>
+        </li>
+        <li>
+          <h1 class="title">LOGIN</h1>
+        </li>
+      <% elsif current_page?(new_user_registration_path) %>
+        <li class="center">
+          <%= link_to root_path, class: "center link" do %>
+            <span class="iconify icon-size" data-icon="akar-icons:arrow-left"></span>
+          <% end %>
+        </li>
+        <li>
+          <h1 class="title">REGISTER</h1>
+        </li>
+      <% elsif current_page?(groups_path) %>
+        <li class="center">
+          <span class="icon-size", data-icon="akar-icons:arrow-left"></span>
+        </li>
+        <li>
+          <h1 class="title">Transactions</h1>
+        </li>
+      <% elsif current_page?(new_group_path) %>
+        <li class="center">
+          <%= link_to groups_path, class: "center link" do %>
+            <span class="iconify icon-size" data-icon="akar-icons:arrow-left"></span>
+          <% end %>
+        </li>
+        <li>
+          <h1 class="title">New category</h1>
+        </li>
+      <% elsif current_page?(group_expenses_path(@group.id)) %>
+        <li class="center">
+          <%= link_to groups_path, class: "center link" do %>
+            <span class="iconify icon-size" data-icon="akar-icons:arrow-left"></span>
+          <% end %>
+        </li>
+        <li>
+          <h1 class="title">Transactions</h1>
+        </li>
+      <% elsif current_page?(new_group_expense_path(@group.id)) %>
+        <li class="center">
+          <%= link_to group_expenses_path(@group.id), class: "center link" do %>
+            <span class="iconify icon-size" data-icon="akar-icons:arrow-left"></span>
+          <% end %>
+        </li>
+        <li>
+          <h1 class="title">New transaction</h1>
+        </li>
+      <% elsif current_page?(group_expense_path(@group.id, @expense.id)) %>
+        <li class="center">
+          <%= link_to group_expenses_path(@group.id), class: "center link" do %>
+            <span class="iconify icon-size" data-icon="akar-icons:arrow-left"></span>
+          <% end %>
+        </li>
+        <li>
+          <h1 class="title">Transaction</h1>
+        </li>
+      <% end %>
+
+      <% if current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
+        <li class="center">
+            <span class="icon-size", data-icon="octicon:sign-out-16"></span>
+        </li>
+      <% else %>
+        <li class="center">
+          <%= link_to destroy_user_session_path, method: :delete, class: "center link" do %>
+            <span class="iconify icon-size", data-icon="octicon:sign-out-16"></span>
+          <% end %> 
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</header>

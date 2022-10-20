@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BudgetApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'reset.css' %>
+    <%= stylesheet_link_tag 'style.css' %>
+    <%= javascript_importmap_tags %>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  </head>
+
+  <body>
+    <% unless current_page?(root_path) %>
+      <%= render partial: 'partials/navbar'%>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
