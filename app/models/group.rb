@@ -6,4 +6,12 @@ class Group < ApplicationRecord
   validates :name, presence: true, uniqueness: true,
                    length: { minimum: 2, too_short: '%<count> characters is the minimum allowed' }
   validates :icon, presence: true
+
+  def total
+    expenses.sum { |expense| expense.amount }
+  end
+
+  def self.icon_list
+    ['🍴', '🛍️', '🎁', '🏠', '👨‍👩‍👦', '👨‍🎓', '💅', '🐶', '✈️', '🚍', '🚘', '🧍🏻', '💻', '💰', '💹', '🏥', '🏖️', '🚰', '⚡']
+  end
 end
