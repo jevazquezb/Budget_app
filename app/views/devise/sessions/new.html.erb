@@ -1,22 +1,24 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email" %>
+  <div class="cat-field-cont reg-cont">
+    <%= f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email", class: "cat-field" %>
   </div>
 
-  <div class="field">
-    <%= f.password_field :password, placeholder: "Password", autocomplete: "current-password" %>
+  <div class="cat-field-cont reg-cont">
+    <%= f.password_field :password, placeholder: "Password", autocomplete: "current-password", class: "cat-field" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="rem-cont">
+      <%= f.check_box :remember_me, class: "box-size" %>
+      <%= f.label :remember_me, class: "rem-size" %>
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <div class="actions-cat">
+    <%= f.submit "Log in", class: "save-btn" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="comp-links">
+  <%= render "devise/shared/links" %>
+</div>
