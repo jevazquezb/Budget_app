@@ -1,0 +1,14 @@
+<%= form_with model: @group do |form| %>
+  <div class="cat-field-cont">
+    <%= form.text_field :name, value: @group.name, placeholder: "Category name", required: true, class: "cat-field" %>
+  </div>
+
+  <div class="cat-icon-cont">
+    <%= form.label :icon, 'Select icon:', class: "icon-label" %>
+    <%= form.select :icon, @icons.map { |i| i.to_s }, {}, {value: @group.icon, class: "icon-menu"} %>
+  </div>
+
+  <div class="actions-cat">
+    <%= form.submit "Save", class: "save-btn" %>
+  </div>
+<% end %>
