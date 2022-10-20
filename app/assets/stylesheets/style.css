@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+  background-color: #f0f3f2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.app-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2rem;
+}
+
+.owner {
+  font-size: 0.9rem;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title-cont {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.registration {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7% 0 15% 0;
+}
+
+.reg-btn-cont {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  background-color: #3778c2;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  height: 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup {
+  color: #555e67;
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 10px;
+  /*margin-bottom: 5%;*/
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.navlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.icon-size {
+  width: 30px;
+  height: 30px;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Group-index */
+.add-cat-box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #5fb523;
+  height: 6%;
+  padding: 3%;
+}
+
+.new-cat-link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/* Notices & alerts */
+.not-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  color: #555e67;
+  font-size: 0.8rem;
+}
+
+/* Group */
+.cat-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  overflow-y: scroll;
+}
+
+.cat-link {
+  width: 90%;
+  display: flex;
+  background-color: #fff;
+  height: 50px;
+  align-items: center;
+  padding: 3%;
+  text-decoration: none;
+}
+
+.cat-size {
+  font-size: 2.5rem;
+  margin-right: 3%;
+}
+
+.cat-name {
+  color: #555e67;
+}
+
+.amount {
+  margin-left: auto;
+  color: #555e67;
+  font-weight: bolder;
+}
+
+/* Group form */
+.cat-field-cont {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.cat-field {
+  width: 90%;
+  padding: 10px;
+  font-size: 1.3rem;
+}
+
+.cat-icon-cont {
+  margin-top: 5%;
+  padding: 0 2%;
+  display: flex;
+}
+
+.icon-label {
+  width: 30%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  color: #555e67;
+}
+
+.icon-menu {
+  width: 60%;
+  padding: 10px;
+  font-size: 1.3rem;
+  flex-grow: 1;
+}
+
+.actions-cat {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.save-btn {
+  background-color: #5fb523;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 7px;
+  width: 40%;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Transactions index */
+.rem-btn {
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+}
+
+.trans-cont {
+  margin-top: 2vh;
+}
+
+.exp-title {
+  font-size: 1.2rem;
+  margin-left: 8%;
+  color: #434b54;
+  font-weight: bold;
+  align-self: start;
+}
+
+.non-items-msg {
+  margin-top: 3vh;
+  text-align: center;
+  color: #555e67;
+}
+
+.trans-box {
+  flex-direction: column;
+  height: auto;
+}
+
+.single-trans {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+}
+
+.date {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  align-self: stretch;
+}
