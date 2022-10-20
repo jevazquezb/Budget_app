@@ -7,12 +7,16 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'reset.css' %>
+    <%= stylesheet_link_tag 'style.css' %>
     <%= javascript_importmap_tags %>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% unless current_page?(root_path) %>
+      <%= render partial: 'partials/navbar'%>
+    <% end %>
     <%= yield %>
   </body>
 </html>
