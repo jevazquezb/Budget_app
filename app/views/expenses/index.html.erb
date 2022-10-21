@@ -1,0 +1,27 @@
+<section class="not-cont">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</section>
+<section class="cat-cont">
+  <div class="cat-link">
+    <%= render @group %>
+  </div>
+  <%= button_to "Delete category", group_path(@group.id), method: :delete, class: "rem-btn" %>
+</section>
+<section class="cat-cont trans-cont">
+  <h2 class="exp-title">Expenses</h2>
+  <% if @expenses.any? %>
+    <% @expenses.each do |expense| %>
+      <%= link_to group_expense_path(@group.id, expense.id), class:"cat-link trans-box" do %>
+        <%= render expense %>
+      <% end %>
+    <% end %>
+  <% else %>
+    <h2 class="non-items-msg">You have not made any transactions</h2>
+  <% end %>
+</section>
+<div class="add-cat-box">
+  <%= link_to new_group_expense_path(@group.id), class: "new-cat-link" do %>
+    <p>Add new transaction</p>
+  <% end %>
+</div>
