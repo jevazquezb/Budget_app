@@ -14,11 +14,11 @@
 
 ## Live Demo
 
-[Live Demo Link](https://salty-sea-06382.herokuapp.com/)
+[Live Demo Link](https://finapp.onrender.com/).
 
 ## Project presentation
 
-[Project description video](https://www.loom.com/share/86348938801d45e78f230c210db7b575)
+[Project description video](https://www.loom.com/share/86348938801d45e78f230c210db7b575).
 
 ## Getting Started
 
