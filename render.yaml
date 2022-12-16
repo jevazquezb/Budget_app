@@ -1,7 +1,6 @@
 databases:
-  - name: Budget_app
-    databaseName: Budget_app
-    user: Budget_app
+  - name: Budget_app # Creates a database named 'Budget_app'
+    ipAllowList: [] # Only allow internal connections
 
 services:
   - type: web
